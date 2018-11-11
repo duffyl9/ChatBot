@@ -1,0 +1,65 @@
+html {
+
+	font-family: sans-serif;
+}
+body {
+	background: #91bae6;
+	margin-left: 0vw;
+	margin-right: 0vw;
+  margin-top: 0vw;
+  margin-bottom: 0vw;
+}
+
+.top-banner{
+  background-color: #2901ab;
+  height: 100px;
+  position: center;
+
+}
+ .top-banner img{
+	overflow: fixed;
+  padding-top: 1.75vw;
+	height : 60px;
+	margin-left: 10px;
+
+}
+
+#title{
+	text-align: center;
+  display:inline;
+  margin-top: 0px;
+	padding-top: -10vw;
+
+
+}
+
+.back{
+	background-color: #91bae6;
+/*	background-image: url(../img/lynn-graduate-new.jpg);
+	height: 175vh;
+	overflow: fixed;
+	margin-top: 0vh;
+	margin:0px;*/
+}
+.About{
+	margin-top:15vh;
+	margin-left: 10vh;
+	border-style: solid;
+	border-width:3px;
+	border-color: #2901ab;
+	border-radius: 3px;
+	width: 45vw;
+	word-wrap: normal;
+	background: #FFFFFF;
+	text-align: center;
+	font-size:20px;
+	height: 45vh;
+	opacity: 1;
+}
+
+ #welcome-text{
+	 align: center;
+	 padding-top: 5px;
+	 padding-left: 5px;
+	 padding-right: 5px;
+}
