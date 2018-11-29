@@ -4,7 +4,9 @@
    use BotMan\BotMan\BotMan;
    use BotMan\BotMan\BotManFactory;
    use BotMan\BotMan\Drivers\DriverManager;
-   
+
+   include('scripts/db_connect.php');
+
    $config = [
     // Your driver-specific configuration
     // "telegram" => [

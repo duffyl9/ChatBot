@@ -16,7 +16,7 @@
 
   <body>
     <div class = "top-banner">
-        <img src="static/img/trinity-logo.png" height = 65% >
+        <img src="static/img/trinity-pic.jpg" height = 65% >
         <h1 id = "title" >TCD Book a Room </h1>
 
      </div>
