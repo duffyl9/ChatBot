@@ -1,5 +1,10 @@
 <?php
-  session_start();
+
+    session_start();
+    //redirects the user to the home page if already logged in
+    if ($_SESSION['uid']) {
+        header("location:home.php");
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,7 +17,7 @@
   <body>
     <div class = "top-banner">
         <img src="static/img/trinity-logo.png" height = 65% >
-        <h1 id = "title" >TCD Book a Room </h1> 
+        <h1 id = "title" >TCD Book a Room </h1>
 
      </div>
     <div class = "back">
