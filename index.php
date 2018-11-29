@@ -4,7 +4,7 @@
     //redirects the user to the home page if already logged in
 
     $_SESSION['user_id']='';
-  //  $_SESSION['message']='';
+   $_SESSION['message']='';
 ?>
 <!DOCTYPE html>
 <html>
