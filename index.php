@@ -2,9 +2,9 @@
 
     session_start();
     //redirects the user to the home page if already logged in
-    if ($_SESSION['uid']) {
-        header("location:home.php");
-    }
+
+    $_SESSION['user_id']='';
+  //  $_SESSION['message']='';
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,9 +36,9 @@
 
     </div>
       <div class="register">
-      	<form action="sign-in.php" method="post">
+      	<form action="log-in.php" method="post">
       		<div>
-      			<p><!--session message will go here --></p>
+      			<p><?php echo($_SESSION['message']);?></p>
       		</div>
       		<div class="sign-up-elem">
       			<div class="label">

@@ -1,14 +1,16 @@
 <?php
 //initializes a mysqli connection. username and password will likely need to be changed based on your working environment
 	$user = 'root';
-	$password ='root';
+	$password ='';
 	$host = 'localhost';
 	$myDB = 'chatbot_db';
-	$mysqli = new mysqli($host,$user,$password,$myDB);
+	$conn = new mysqli($host,$user,$password,$myDB);
 
-	if ($mysqli->connect_errno) {
+	if ($conn->connect_errno) {
 		$_SESSION['message'] =  'Cant connect to the databas';
-    printf("Connection failed: %s\n", $mysqli->connect_error);
-    die();}
+    printf("Connection failed: %s\n", $conn->connect_error);
+		
+    die();
+	}
 
 ?>
