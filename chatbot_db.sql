@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2018 at 02:01 PM
+-- Generation Time: Nov 29, 2018 at 05:36 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -137,7 +137,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `surname`, `email`, `password`) VALUES
-(1, 'Nuala', 'Ní Dhomhnaill', 'test@example.com', 'secure'),
+(1, 'Nuala', 'Ní Dhomhnaill', 'test1@example.com', 'secure'),
 (2, 'Lauren', 'Duffy', 'test@example.com', 'secure');
 
 --
@@ -176,7 +176,8 @@ ALTER TABLE `room_types`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT for dumped tables
