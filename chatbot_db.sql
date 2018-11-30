@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2018 at 05:36 PM
+-- Generation Time: Nov 30, 2018 at 12:45 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -36,6 +36,13 @@ CREATE TABLE `bookings` (
   `end_time` time NOT NULL,
   `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bookings`
+--
+
+INSERT INTO `bookings` (`id`, `room_id`, `user_id`, `start_time`, `end_time`, `date`) VALUES
+(1, 1, 2, '07:05:00', '09:14:00', '2018-11-30');
 
 -- --------------------------------------------------------
 
@@ -129,7 +136,7 @@ CREATE TABLE `users` (
   `name` varchar(20) NOT NULL,
   `surname` varchar(20) NOT NULL,
   `email` varchar(30) NOT NULL,
-  `password` varchar(20) NOT NULL
+  `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -137,8 +144,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `surname`, `email`, `password`) VALUES
-(1, 'Nuala', 'Ní Dhomhnaill', 'test1@example.com', 'secure'),
-(2, 'Lauren', 'Duffy', 'test@example.com', 'secure');
+(1, 'Nuala', 'Ní Dhomhnaill', 'test1@example.com', 'd41d8cd98f00b204e9800998ecf8427e'),
+(2, 'Lauren', 'Duffy', 'test@example.com', 'd41d8cd98f00b204e9800998ecf8427e');
 
 --
 -- Indexes for dumped tables
@@ -187,7 +194,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `buildings`
