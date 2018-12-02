@@ -52,6 +52,10 @@ class ComposerStaticInit19b648f77adea69cd721b1cee1bb5bdb
         array (
             'Mpociot\\Pipeline\\' => 17,
         ),
+        'D' => 
+        array (
+            'Doctrine\\Common\\Cache\\' => 22,
+        ),
         'B' => 
         array (
             'BotMan\\Drivers\\Web\\' => 19,
@@ -123,6 +127,10 @@ class ComposerStaticInit19b648f77adea69cd721b1cee1bb5bdb
         'Mpociot\\Pipeline\\' => 
         array (
             0 => __DIR__ . '/..' . '/mpociot/pipeline/src',
+        ),
+        'Doctrine\\Common\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache',
         ),
         'BotMan\\Drivers\\Web\\' => 
         array (
