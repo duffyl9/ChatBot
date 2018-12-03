@@ -1,10 +1,11 @@
 <?php
 
     session_start();
-    //redirects the user to the home page if already logged in
+  if (!isset($_SESSION['user_id'])){
+    $_SESSION['message']='';
+  }
 
-    $_SESSION['user_id']='';
-   $_SESSION['message']='';
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,11 +13,13 @@
   <head >
     <link href="static/css/main.css" type="text/css" rel="stylesheet">
     <link href="static/css/register.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/assets/css/chat.min.css">
+
   </head>
 
   <body>
     <div class = "top-banner">
-        <img src="static/img/trinity-pic.jpg" height = 65% >
+        <img src="static/img/trinity-logo.png" height = 65% >
         <h1 id = "title" >TCD Book a Room </h1>
 
      </div>

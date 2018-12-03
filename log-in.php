@@ -11,7 +11,7 @@
   if ($id && md5($_POST['password']== $password)) {
         //add id to the session and redirect to the homepage
         $_SESSION['user_id'] = $id;
-        
+
       //  $_SESSION['message'] = "correct password";
         header("location: home.php");
     }
