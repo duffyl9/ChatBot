@@ -1,36 +1,31 @@
 <?php
+
 namespace App\Conversations;
 
-
-
-$_SESSION['room_id'] =0;
-$_SESSION['room_type_id']=0;
-$_SESSION['Building_id']=0;
-$_SESSION['booking_id']=0;
-
-
+use Illuminate\Foundation\Inspiring;
 use BotMan\BotMan\Messages\Incoming\Answer;
 use BotMan\BotMan\Messages\Outgoing\Question;
+use BotMan\BotMan\Messages\Outgoing\Actions\Button;
 use BotMan\BotMan\Messages\Conversations\Conversation;
 
-class OnboardingConversation extends Conversation
+class ExampleConversation extends Conversation
 {
-    protected $firstname;
-
-    protected $email;
 
     public function run()
     {
         // This will be called immediately
         $this->askRoomType();
-        #$this->askFirstname()
     }
+    protected $firstname;
 
-    public function askRoomType(){
-      $question = Question::create('What kind of room do you need?')
-        ->fallback('Unable to book a room')
-        ->callbackId('room_type')
-        ->addButtons([
+    protected $email;
+
+    public function askRoomType()
+    {
+        $question = Question::create('What kind of room do you need?');
+        $botman->fallback('Unable to book a room');
+        $botman->callbackId('room_type');
+        $botman->addButtons([
             Button::create('Function')->value('1'),
             Button::create('Meeting')->value('0'),
         ]);
@@ -71,4 +66,4 @@ class OnboardingConversation extends Conversation
 
 
 }
-?>
+

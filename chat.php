@@ -1,16 +1,22 @@
 <?php
+
+//namespace App\Http\Conversations;
+
 session_start();
+
 require 'onboardingConversation.php';
 require 'bot\vendor\botman\driver-web\src\WebDriver';
 require_once 'vendor/autoload.php';
-require doctrine/cache;
+//require doctrine/cache;
 
 use BotMan\BotMan\BotMan;
 use BotMan\BotMan\BotManFactory;
 use BotMan\BotMan\Drivers\DriverManager;
+use BotMan\BotMan\Cache\DoctrineCache;
 
-use Mpociot\BotMan\Cache\DoctrineCache;
-use Doctrine\Common\Cache\FilesystemCache;
+//use Mpociot\BotMan\Cache\DoctrineCache;
+//use Doctrine\Common\Cache\FilesystemCache;
+
 
 use BotMan\BotMan\Messages\Incoming\Answer;
 use BotMan\BotMan\Messages\Outgoing\Question;
@@ -24,7 +30,7 @@ use BotMan\BotMan\Messages\Conversations\Conversation;
     // ]
   ];
 
-$doctrineCacheDriver = new FilesystemCache(__DIR__);
+//$doctrineCacheDriver = new FilesystemCache(__DIR__);
 
 
    // DriverManager::loadDriver(\BotMan\Drivers\Web\WebDriver::class);
@@ -37,11 +43,13 @@ $botman = BotManFactory::create($config, new DoctrineCache($doctrineCacheDriver)
 
 
 
-$botman->listen();
+//$botman->listen();
 
 $botman->hears('hi', function($bot) {
-   $bot->startConversation(new OnboardingConversation);
+   $bot->startConversation(new OnboardingConversation());
 });
+
+//$botman->startConversation(new PizzaConversation(), 'my-recipient-user-id', TelegramDriver::class);
 
 
 $botman->fallback(function($bot) {
@@ -49,6 +57,7 @@ $botman->fallback(function($bot) {
 });
 
 // Start listening
+$botman->listen();
 
 
 ?>
