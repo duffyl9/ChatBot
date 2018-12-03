@@ -40,13 +40,13 @@ $botman->hears('on {day}', function ($bot, $day) {
 });
 
 $botman->hears('at ([0-9]+)', function ($bot, $number) {
-    $bot->reply('Perfect, see you then!' );
+    $bot->reply('Perfect. We will send you an email for confirmation. This will contain the details of your booking, See you then!' );
 });
 
 $botman->fallback(function($bot) {
     $bot->reply('Sorry, I did not understand these commands. Here is a list of commands I understand: ...');
 });
 
-printf($day);
+//printf($day);
 // Start listening
 $botman->listen();
