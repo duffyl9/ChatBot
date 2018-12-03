@@ -1,5 +1,5 @@
 <?php
-<<<<<<< HEAD
+
 
 //namespace App\Http\Conversations;
 
@@ -18,19 +18,19 @@ use BotMan\BotMan\Cache\DoctrineCache;
 //use Mpociot\BotMan\Cache\DoctrineCache;
 //use Doctrine\Common\Cache\FilesystemCache;
 
-=======
+
   session_start();
   require_once 'vendor/autoload.php';
   include ('scripts/db_connect.php');
   $day='';
 
-//   use onboardingConversation as convo;
+  use onboardingConversation as convo;
    use BotMan\BotMan\BotMan;
    use BotMan\BotMan\BotManFactory;
    use BotMan\BotMan\Drivers\DriverManager;
 
    $config = [
->>>>>>> 3139729306341d96ca2d285e0971f9b4aa0b0c3d
+
 
      'web' => [
      	'matchingData' => [
@@ -41,11 +41,11 @@ use BotMan\BotMan\Cache\DoctrineCache;
 
    DriverManager::loadDriver(\BotMan\Drivers\Web\WebDriver::class);
 
-<<<<<<< HEAD
+
 //$doctrineCacheDriver = new FilesystemCache(__DIR__);
-=======
+
    $botman = BotManFactory::create($config);
->>>>>>> 3139729306341d96ca2d285e0971f9b4aa0b0c3d
+
 
   // Give the bot something to listen for.
 $botman->hears('hello', function (BotMan $bot) {
@@ -59,7 +59,7 @@ $botman->hears('yes', function (BotMan $bot) {
 
 $botman->hears('on {day}', function ($bot, $day) {
 
-<<<<<<< HEAD
+
 //$botman->listen();
 
 $botman->hears('hi', function($bot) {
@@ -68,7 +68,7 @@ $botman->hears('hi', function($bot) {
 
 //$botman->startConversation(new PizzaConversation(), 'my-recipient-user-id', TelegramDriver::class);
 
-=======
+
     $bot->reply('What time on ' . $day . '?');
     //$day = $day;
 
@@ -86,9 +86,7 @@ $botman->fallback(function($bot) {
 printf($day);
 // Start listening
 $botman->listen();
-<<<<<<< HEAD
+
 
 
 ?>
-=======
->>>>>>> 3139729306341d96ca2d285e0971f9b4aa0b0c3d
